@@ -29,10 +29,10 @@ class HomeController extends Controller
 
     public function sendmessage(Request $request){
         $message=$request->message;
-        $authUserId = auth()->user()->id;
+        $authUserId = auth()->user()->name;
 
         $data_array = $request->except( 'updated_at', 'created_at');		
-        $data_array["user_id"] = $authUserId;
+        $data_array["user_name"] = $authUserId;
         $data_array["message"] = $message;
         
         Message::create($data_array);
