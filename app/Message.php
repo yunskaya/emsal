@@ -9,7 +9,7 @@ class Message extends Model
     protected $table = 'messages';
 
     protected $fillable  = [
-        'user_id',
+        'user_name',
         'message'
     ];
 }

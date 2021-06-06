@@ -29,15 +29,15 @@ class HomeController extends Controller
 
     public function sendmessage(Request $request){
         $message=$request->message;
-        $authUserId = auth()->user()->name;
+        $authUserName = auth()->user()->name;
 
         $data_array = $request->except( 'updated_at', 'created_at');		
-        $data_array["user_name"] = $authUserId;
+        $data_array["user_name"] = $authUserName;
         $data_array["message"] = $message;
         
         Message::create($data_array);
         
-        event(new \App\Events\Chat($message,$authUserId));
+        event(new \App\Events\Chat($message,$authUserName));
 
     }
 }
