@@ -86,7 +86,7 @@
                      },
                      error: function (res) {
                      }
-                 });
+                 }); 
             });
 </script>
 @endpush
