@@ -74,9 +74,7 @@
             }
 
             $('body').on('click','#send',function(e){
-                e.preventDefault();
-                var message=$('#message').val();
-                console.log(message);
+                e.preventDefault(); 
                 $.ajax({
                      url: "/sendmessage",
                      method: "get",
@@ -87,6 +85,8 @@
                      error: function (res) {
                      }
                  }); 
+                 frm = document.getElementsByClassName('form')[0];
+                 frm.reset();
             });
 </script>
 @endpush
