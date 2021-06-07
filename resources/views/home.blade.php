@@ -74,7 +74,9 @@
             }
 
             $('body').on('click','#send',function(e){
-                e.preventDefault(); 
+                e.preventDefault();
+                var message=$('#message').val();
+                
                 $.ajax({
                      url: "/sendmessage",
                      method: "get",
