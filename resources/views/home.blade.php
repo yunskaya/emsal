@@ -48,7 +48,7 @@
 <script type="text/javascript">
 
             Echo.channel('message').listen('Chat', (e) => {
-                console.log(e);
+                 
                 createDiv(e.message,e.userId);
             
             });
