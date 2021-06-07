@@ -18,7 +18,12 @@
                     <button onClick="window.location.reload();">Refresh</button>
 
                     <div style="border:1px solid black; margin-top:20px; height:500px; overflow:scroll;" id="messageBox" >
-                         
+                        @foreach ($messages as $message)    
+                            <div class="row" style="border:1px solid black; margin:10px">
+                                <p style="float:left; margin-left:5px;">{{ $message->user_name }}</p>
+                                <p style="margin-left:6px; float:left;">{{ $message->message }}</p>
+                            </div>
+                        @endforeach
                     </div>
 
                     <form class="form" method="POST" action="" style="margin-top:10px;">

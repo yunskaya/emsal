@@ -24,7 +24,8 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('home');
+        $messages = message::all();
+        return view('home',compact('messages'));
     }
 
     public function sendmessage(Request $request){
@@ -33,6 +34,7 @@ class HomeController extends Controller
 
         $data_array = $request->except( 'updated_at', 'created_at');		
         $data_array["user_name"] = $authUserName;
+        $data_array["use_id"] = auth()->user()->id;
         $data_array["message"] = $message;
         
         Message::create($data_array);
