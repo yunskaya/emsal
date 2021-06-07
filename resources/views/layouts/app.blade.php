@@ -14,8 +14,7 @@
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
     <script src="https://code.jquery.com/jquery-3.6.0.slim.js" integrity="sha256-HwWONEZrpuoh951cQD1ov2HUK5zA5DwJ1DNUXaM6FsY=" crossorigin="anonymous"></script>
-    
- 
+   
 </head>
 <body>
     <div id="app">
@@ -80,6 +79,6 @@
 
     <!-- Scripts -->
     @stack('scripts')
-
+    <script src="{{ asset('js/bootstrap.js') }}" > </script>
 </body>
 </html>
