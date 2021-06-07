@@ -78,7 +78,6 @@
     </div>
 
     <!-- Scripts -->
-    @stack('scripts')
-    <script src="{{ asset('js/bootstrap.js') }}" > </script>
+    @stack('scripts') 
 </body>
 </html>
